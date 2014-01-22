@@ -1,0 +1,76 @@
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProjects (20130228190011)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "target_pledge_amount" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130228190011"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Migrating to AddFieldsToProjects (20130228190204)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "projects" ADD "website" varchar(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "projects" ADD "pledging_ends_on" date
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130228190204"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Migrating to AddMoreFieldsToProjects (20130228222855)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "projects" ADD "team_members" varchar(255)
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "projects" ADD "image_file_name" varchar(255)[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130228222855"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.4ms)[0m  [1mINSERT INTO "projects" ("created_at", "description", "image_file_name", "name", "pledging_ends_on", "target_pledge_amount", "team_members", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 22 Jan 2014 04:59:15 UTC +00:00], ["description", "A description of a start-up project"], ["image_file_name", "project-a.png"], ["name", "Start-Up Project"], ["pledging_ends_on", Thu, 23 Jan 2014], ["target_pledge_amount", #<BigDecimal:10337a830,'0.1E3',9(45)>], ["team_members", "Amber, John, Charles"], ["updated_at", Wed, 22 Jan 2014 04:59:15 UTC +00:00], ["website", "http://project-a.com"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "projects" ("created_at", "description", "image_file_name", "name", "pledging_ends_on", "target_pledge_amount", "team_members", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Wed, 22 Jan 2014 04:59:15 UTC +00:00], ["description", "A description of a community project"], ["image_file_name", "project-b.png"], ["name", "Community Project"], ["pledging_ends_on", Wed, 29 Jan 2014], ["target_pledge_amount", #<BigDecimal:1009c3690,'0.2E3',9(45)>], ["team_members", "Diana, Jane, Joe"], ["updated_at", Wed, 22 Jan 2014 04:59:15 UTC +00:00], ["website", "http://project-b.com"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "projects" ("created_at", "description", "image_file_name", "name", "pledging_ends_on", "target_pledge_amount", "team_members", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 22 Jan 2014 04:59:15 UTC +00:00], ["description", "A description of a person project"], ["image_file_name", "project-c.png"], ["name", "Personal Project"], ["pledging_ends_on", Sat, 22 Feb 2014], ["target_pledge_amount", #<BigDecimal:1033d0d48,'0.3E3',9(45)>], ["team_members", "Tom, Harry, Sally"], ["updated_at", Wed, 22 Jan 2014 04:59:15 UTC +00:00], ["website", "http://project-c.com"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "target_pledge_amount" decimal, "created_at" datetime, "updated_at" datetime, "website" varchar(255), "pledging_ends_on" date, "team_members" varchar(255), "image_file_name" varchar(255)) [0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (2.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130228222855')[0m
+  [1m[35m (1.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130228190011')
+  [1m[36m (1.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130228190204')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-21 23:00:41 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.4ms)[0m  SELECT "projects".* FROM "projects" WHERE (pledging_ends_on >= '2014-01-22 05:00:41.734234') ORDER BY pledging_ends_on asc
+  Rendered projects/index.html.erb within layouts/application (66.0ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_sidebar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 1892ms (Views: 1853.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/project-a.png" for 127.0.0.1 at 2014-01-21 23:00:43 -0600
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2014-01-21 23:00:43 -0600
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-01-21 23:00:43 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-21 23:00:43 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-21 23:00:43 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-21 23:00:43 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-21 23:00:43 -0600
+
+
+Started GET "/assets/project-b.png" for 127.0.0.1 at 2014-01-21 23:00:43 -0600
+
+
+Started GET "/assets/project-c.png" for 127.0.0.1 at 2014-01-21 23:00:43 -0600
