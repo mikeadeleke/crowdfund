@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130228222855) do
+ActiveRecord::Schema.define(version: 20140123232700) do
+
+  create_table "pledges", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.decimal  "amount"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "comment"
+    t.integer  "project_id"
+  end
+
+  add_index "pledges", ["project_id"], name: "index_pledges_on_project_id"
 
   create_table "projects", force: true do |t|
     t.string   "name"

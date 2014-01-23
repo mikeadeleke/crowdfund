@@ -9,3 +9,4 @@ def project_attributes(overrides = {})
     image_file_name: "test.png"
   }.merge(overrides)
 end
+

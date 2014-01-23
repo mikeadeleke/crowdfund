@@ -95,4 +95,24 @@ describe "A project" do
     end
   end
 
+  it "has many pledges" do
+    project = Project.new(project_attributes)
+
+    pledge1 = project.pledges.new(pledge_attributes)
+    pledge2 = project.pledges.new(pledge_attributes)
+
+    expect(project.pledges).to include(pledge1)
+    expect(project.pledges).to include(pledge2)
+  end
+
+  it "deletes associated pledges" do
+    project = Project.create(project_attributes)
+
+    project.pledges.create(pledge_attributes)
+
+    expect {
+      project.destroy
+    }.to change(Pledge, :count).by(-1)
+  end
+
 end

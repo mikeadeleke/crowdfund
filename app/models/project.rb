@@ -1,4 +1,6 @@
 class Project < ActiveRecord::Base
+  has_many :pledges, dependent: :destroy
+
   validates :name, presence: true
   
   validates :description, presence: true, length: { maximum: 500 }

@@ -1,4 +1,7 @@
 Crowdfund::Application.routes.draw do
+  
   root  "projects#index"
-  resources :projects
+  resources :projects do
+    resources :pledges
+  end
 end
