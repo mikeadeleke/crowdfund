@@ -2290,3 +2290,450 @@ Processing by PledgesController#index as HTML
   Rendered layouts/_footer.html.erb (0.4ms)
 Completed 200 OK in 101ms (Views: 66.0ms | ActiveRecord: 1.1ms)
   [1m[35m (1.6ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (4.7ms)[0m  INSERT INTO "projects" ("created_at", "description", "image_file_name", "name", "pledging_ends_on", "target_pledge_amount", "team_members", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 24 Jan 2014 14:54:55 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["image_file_name", "test.png"], ["name", "Test Project"], ["pledging_ends_on", Sat, 25 Jan 2014], ["target_pledge_amount", #<BigDecimal:1048d2ae8,'0.1E3',9(45)>], ["team_members", "The team members"], ["updated_at", Fri, 24 Jan 2014 14:54:55 UTC +00:00], ["website", "http://project.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/projects/1/pledges/new" for 127.0.0.1 at 2014-01-24 08:54:55 -0600
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "projects" ("created_at", "description", "image_file_name", "name", "pledging_ends_on", "target_pledge_amount", "team_members", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 24 Jan 2014 14:54:55 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["image_file_name", "test.png"], ["name", "Test Project"], ["pledging_ends_on", Sat, 25 Jan 2014], ["target_pledge_amount", #<BigDecimal:104a19460,'0.1E3',9(45)>], ["team_members", "The team members"], ["updated_at", Fri, 24 Jan 2014 14:54:55 UTC +00:00], ["website", "http://project.com"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/projects/1" for 127.0.0.1 at 2014-01-24 08:54:55 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered projects/show.html.erb within layouts/application (18.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_flashes.html.erb (0.7ms)
+  Rendered layouts/_sidebar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 218ms (Views: 182.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.9ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.6ms)[0m  INSERT INTO "projects" ("created_at", "description", "image_file_name", "name", "pledging_ends_on", "target_pledge_amount", "team_members", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 24 Jan 2014 14:55:04 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["image_file_name", "test.png"], ["name", "Test Project"], ["pledging_ends_on", Sat, 25 Jan 2014], ["target_pledge_amount", #<BigDecimal:1011ce448,'0.1E3',9(45)>], ["team_members", "The team members"], ["updated_at", Fri, 24 Jan 2014 14:55:04 UTC +00:00], ["website", "http://project.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/projects/1" for 127.0.0.1 at 2014-01-24 08:55:04 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered projects/show.html.erb within layouts/application (16.2ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_flashes.html.erb (0.6ms)
+  Rendered layouts/_sidebar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 154ms (Views: 121.8ms | ActiveRecord: 0.3ms)
+  [1m[36m (1.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "projects" ("created_at", "description", "image_file_name", "name", "pledging_ends_on", "target_pledge_amount", "team_members", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 24 Jan 2014 14:55:04 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["image_file_name", "test.png"], ["name", "Test Project"], ["pledging_ends_on", Sat, 25 Jan 2014], ["target_pledge_amount", #<BigDecimal:102517248,'0.1E3',9(45)>], ["team_members", "The team members"], ["updated_at", Fri, 24 Jan 2014 14:55:04 UTC +00:00], ["website", "http://project.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/projects/1/pledges/new" for 127.0.0.1 at 2014-01-24 08:55:04 -0600
+  [1m[35m (1.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.7ms)[0m  INSERT INTO "projects" ("created_at", "description", "image_file_name", "name", "pledging_ends_on", "target_pledge_amount", "team_members", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 24 Jan 2014 14:56:15 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["image_file_name", "test.png"], ["name", "Test Project"], ["pledging_ends_on", Sat, 25 Jan 2014], ["target_pledge_amount", #<BigDecimal:102bbee48,'0.1E3',9(45)>], ["team_members", "The team members"], ["updated_at", Fri, 24 Jan 2014 14:56:15 UTC +00:00], ["website", "http://project.com"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/projects/1" for 127.0.0.1 at 2014-01-24 08:56:15 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.4ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered projects/show.html.erb within layouts/application (16.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_flashes.html.erb (0.7ms)
+  Rendered layouts/_sidebar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 151ms (Views: 118.1ms | ActiveRecord: 0.4ms)
+Started GET "/projects/1/pledges/new" for 127.0.0.1 at 2014-01-24 08:56:16 -0600
+  [1m[36m (1.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "projects" ("created_at", "description", "image_file_name", "name", "pledging_ends_on", "target_pledge_amount", "team_members", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 24 Jan 2014 14:56:16 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["image_file_name", "test.png"], ["name", "Test Project"], ["pledging_ends_on", Sat, 25 Jan 2014], ["target_pledge_amount", #<BigDecimal:10294a018,'0.1E3',9(45)>], ["team_members", "The team members"], ["updated_at", Fri, 24 Jan 2014 14:56:16 UTC +00:00], ["website", "http://project.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/projects/1/pledges/new" for 127.0.0.1 at 2014-01-24 08:56:16 -0600
+  [1m[35m (1.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.6ms)[0m  INSERT INTO "projects" ("created_at", "description", "image_file_name", "name", "pledging_ends_on", "target_pledge_amount", "team_members", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 24 Jan 2014 14:56:53 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["image_file_name", "test.png"], ["name", "Test Project"], ["pledging_ends_on", Sat, 25 Jan 2014], ["target_pledge_amount", #<BigDecimal:101cd2448,'0.1E3',9(45)>], ["team_members", "The team members"], ["updated_at", Fri, 24 Jan 2014 14:56:53 UTC +00:00], ["website", "http://project.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/projects/1" for 127.0.0.1 at 2014-01-24 08:56:53 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.4ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered projects/show.html.erb within layouts/application (16.1ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_flashes.html.erb (0.8ms)
+  Rendered layouts/_sidebar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 154ms (Views: 120.8ms | ActiveRecord: 0.4ms)
+Started GET "/projects/1/pledges/new" for 127.0.0.1 at 2014-01-24 08:56:53 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 138ms
+  [1m[35m (1.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "projects" ("created_at", "description", "image_file_name", "name", "pledging_ends_on", "target_pledge_amount", "team_members", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 24 Jan 2014 14:56:53 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["image_file_name", "test.png"], ["name", "Test Project"], ["pledging_ends_on", Sat, 25 Jan 2014], ["target_pledge_amount", #<BigDecimal:101e20750,'0.1E3',9(45)>], ["team_members", "The team members"], ["updated_at", Fri, 24 Jan 2014 14:56:53 UTC +00:00], ["website", "http://project.com"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/projects/1/pledges/new" for 127.0.0.1 at 2014-01-24 08:56:53 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 3ms
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.6ms)[0m  INSERT INTO "projects" ("created_at", "description", "image_file_name", "name", "pledging_ends_on", "target_pledge_amount", "team_members", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 24 Jan 2014 14:58:08 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["image_file_name", "test.png"], ["name", "Test Project"], ["pledging_ends_on", Sat, 25 Jan 2014], ["target_pledge_amount", #<BigDecimal:1049c24f8,'0.1E3',9(45)>], ["team_members", "The team members"], ["updated_at", Fri, 24 Jan 2014 14:58:08 UTC +00:00], ["website", "http://project.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/projects/1" for 127.0.0.1 at 2014-01-24 08:58:08 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered projects/show.html.erb within layouts/application (16.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_flashes.html.erb (0.7ms)
+  Rendered layouts/_sidebar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 153ms (Views: 119.7ms | ActiveRecord: 0.3ms)
+Started GET "/projects/1/pledges/new" for 127.0.0.1 at 2014-01-24 08:58:08 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered pledges/new.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 61ms
+  [1m[35m (1.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "projects" ("created_at", "description", "image_file_name", "name", "pledging_ends_on", "target_pledge_amount", "team_members", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 24 Jan 2014 14:58:08 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["image_file_name", "test.png"], ["name", "Test Project"], ["pledging_ends_on", Sat, 25 Jan 2014], ["target_pledge_amount", #<BigDecimal:1038fa148,'0.1E3',9(45)>], ["team_members", "The team members"], ["updated_at", Fri, 24 Jan 2014 14:58:08 UTC +00:00], ["website", "http://project.com"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/projects/1/pledges/new" for 127.0.0.1 at 2014-01-24 08:58:08 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered pledges/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 5ms
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.6ms)[0m  INSERT INTO "projects" ("created_at", "description", "image_file_name", "name", "pledging_ends_on", "target_pledge_amount", "team_members", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 24 Jan 2014 15:02:09 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["image_file_name", "test.png"], ["name", "Test Project"], ["pledging_ends_on", Sat, 25 Jan 2014], ["target_pledge_amount", #<BigDecimal:102df6ff8,'0.1E3',9(45)>], ["team_members", "The team members"], ["updated_at", Fri, 24 Jan 2014 15:02:09 UTC +00:00], ["website", "http://project.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/projects/1" for 127.0.0.1 at 2014-01-24 09:02:09 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered projects/show.html.erb within layouts/application (16.6ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_flashes.html.erb (0.6ms)
+  Rendered layouts/_sidebar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 150ms (Views: 117.2ms | ActiveRecord: 0.3ms)
+Started GET "/projects/1/pledges/new" for 127.0.0.1 at 2014-01-24 09:02:09 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_errors.html.erb (1.3ms)
+  Rendered pledges/new.html.erb within layouts/application (42.5ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 102ms (Views: 47.6ms | ActiveRecord: 0.6ms)
+Started POST "/projects/1/pledges" for 127.0.0.1 at 2014-01-24 09:02:09 -0600
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "pledge"=>{"name"=>"Joe Smith", "email"=>"joe@gmail.com", "amount"=>"100.0", "comment"=>"Count me in!"}, "commit"=>"Create Pledge", "project_id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 7ms
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "projects" ("created_at", "description", "image_file_name", "name", "pledging_ends_on", "target_pledge_amount", "team_members", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 24 Jan 2014 15:02:09 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["image_file_name", "test.png"], ["name", "Test Project"], ["pledging_ends_on", Sat, 25 Jan 2014], ["target_pledge_amount", #<BigDecimal:1028d80f8,'0.1E3',9(45)>], ["team_members", "The team members"], ["updated_at", Fri, 24 Jan 2014 15:02:09 UTC +00:00], ["website", "http://project.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/projects/1/pledges/new" for 127.0.0.1 at 2014-01-24 09:02:09 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered pledges/new.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "pledges"[0m
+Started POST "/projects/1/pledges" for 127.0.0.1 at 2014-01-24 09:02:09 -0600
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "pledge"=>{"name"=>"", "email"=>"", "amount"=>"", "comment"=>""}, "commit"=>"Create Pledge", "project_id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 6ms
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.5ms)[0m  INSERT INTO "projects" ("created_at", "description", "image_file_name", "name", "pledging_ends_on", "target_pledge_amount", "team_members", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 24 Jan 2014 15:02:28 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["image_file_name", "test.png"], ["name", "Test Project"], ["pledging_ends_on", Sat, 25 Jan 2014], ["target_pledge_amount", #<BigDecimal:102c82410,'0.1E3',9(45)>], ["team_members", "The team members"], ["updated_at", Fri, 24 Jan 2014 15:02:28 UTC +00:00], ["website", "http://project.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/projects/1/pledges/new" for 127.0.0.1 at 2014-01-24 09:02:28 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"1"}
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered pledges/new.html.erb within layouts/application (27.8ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_flashes.html.erb (0.7ms)
+  Rendered layouts/_sidebar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 211ms (Views: 66.8ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "pledges"[0m
+Started POST "/projects/1/pledges" for 127.0.0.1 at 2014-01-24 09:02:29 -0600
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "pledge"=>{"name"=>"", "email"=>"", "amount"=>"", "comment"=>""}, "commit"=>"Create Pledge", "project_id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered pledges/new.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 9.4ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pledges"[0m
+  [1m[35m (1.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "projects" ("created_at", "description", "image_file_name", "name", "pledging_ends_on", "target_pledge_amount", "team_members", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 24 Jan 2014 15:02:29 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["image_file_name", "test.png"], ["name", "Test Project"], ["pledging_ends_on", Sat, 25 Jan 2014], ["target_pledge_amount", #<BigDecimal:10123da28,'0.1E3',9(45)>], ["team_members", "The team members"], ["updated_at", Fri, 24 Jan 2014 15:02:29 UTC +00:00], ["website", "http://project.com"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/projects/1" for 127.0.0.1 at 2014-01-24 09:02:29 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered projects/show.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.1ms)
+Started GET "/projects/1/pledges/new" for 127.0.0.1 at 2014-01-24 09:02:29 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered pledges/new.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.1ms)
+Started POST "/projects/1/pledges" for 127.0.0.1 at 2014-01-24 09:02:29 -0600
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "pledge"=>{"name"=>"Joe Smith", "email"=>"joe@gmail.com", "amount"=>"100.0", "comment"=>"Count me in!"}, "commit"=>"Create Pledge", "project_id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "pledges" ("amount", "comment", "created_at", "email", "name", "project_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["amount", #<BigDecimal:102c915f0,'0.1E3',9(18)>], ["comment", "Count me in!"], ["created_at", Fri, 24 Jan 2014 15:02:29 UTC +00:00], ["email", "joe@gmail.com"], ["name", "Joe Smith"], ["project_id", 1], ["updated_at", Fri, 24 Jan 2014 15:02:29 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/projects/1/pledges
+Completed 302 Found in 8ms (ActiveRecord: 0.9ms)
+Started GET "/projects/1/pledges" for 127.0.0.1 at 2014-01-24 09:02:29 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPledge Load (0.3ms)[0m  SELECT "pledges".* FROM "pledges" WHERE "pledges"."project_id" = ?  [["project_id", 1]]
+  Rendered pledges/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 0.4ms)
+  [1m[36m (1.6ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.6ms)[0m  INSERT INTO "projects" ("created_at", "description", "image_file_name", "name", "pledging_ends_on", "target_pledge_amount", "team_members", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 24 Jan 2014 15:03:15 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["image_file_name", "test.png"], ["name", "Test Project"], ["pledging_ends_on", Sat, 25 Jan 2014], ["target_pledge_amount", #<BigDecimal:1048ea4e0,'0.1E3',9(45)>], ["team_members", "The team members"], ["updated_at", Fri, 24 Jan 2014 15:03:15 UTC +00:00], ["website", "http://project.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/projects/1" for 127.0.0.1 at 2014-01-24 09:03:15 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered projects/show.html.erb within layouts/application (17.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_flashes.html.erb (0.6ms)
+  Rendered layouts/_sidebar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 153ms (Views: 119.7ms | ActiveRecord: 0.3ms)
+Started GET "/projects/1/pledges/new" for 127.0.0.1 at 2014-01-24 09:03:16 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered pledges/new.html.erb within layouts/application (19.5ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 80ms (Views: 24.6ms | ActiveRecord: 0.6ms)
+Started POST "/projects/1/pledges" for 127.0.0.1 at 2014-01-24 09:03:16 -0600
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "pledge"=>{"name"=>"Joe Smith", "email"=>"joe@gmail.com", "amount"=>"100.0", "comment"=>"Count me in!"}, "commit"=>"Create Pledge", "project_id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "pledges" ("amount", "comment", "created_at", "email", "name", "project_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["amount", #<BigDecimal:102a461b0,'0.1E3',9(18)>], ["comment", "Count me in!"], ["created_at", Fri, 24 Jan 2014 15:03:16 UTC +00:00], ["email", "joe@gmail.com"], ["name", "Joe Smith"], ["project_id", 1], ["updated_at", Fri, 24 Jan 2014 15:03:16 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/projects/1/pledges
+Completed 302 Found in 9ms (ActiveRecord: 1.0ms)
+Started GET "/projects/1/pledges" for 127.0.0.1 at 2014-01-24 09:03:16 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPledge Load (0.3ms)[0m  [1mSELECT "pledges".* FROM "pledges" WHERE "pledges"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered pledges/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (1.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "projects" ("created_at", "description", "image_file_name", "name", "pledging_ends_on", "target_pledge_amount", "team_members", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 24 Jan 2014 15:03:16 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["image_file_name", "test.png"], ["name", "Test Project"], ["pledging_ends_on", Sat, 25 Jan 2014], ["target_pledge_amount", #<BigDecimal:100c23f48,'0.1E3',9(45)>], ["team_members", "The team members"], ["updated_at", Fri, 24 Jan 2014 15:03:16 UTC +00:00], ["website", "http://project.com"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/projects/1/pledges/new" for 127.0.0.1 at 2014-01-24 09:03:16 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered pledges/new.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 9.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "pledges"
+Started POST "/projects/1/pledges" for 127.0.0.1 at 2014-01-24 09:03:16 -0600
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "pledge"=>{"name"=>"", "email"=>"", "amount"=>"", "comment"=>""}, "commit"=>"Create Pledge", "project_id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 14ms
+  [1m[35m (1.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.8ms)[0m  INSERT INTO "projects" ("created_at", "description", "image_file_name", "name", "pledging_ends_on", "target_pledge_amount", "team_members", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 24 Jan 2014 15:05:40 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["image_file_name", "test.png"], ["name", "Test Project"], ["pledging_ends_on", Sat, 25 Jan 2014], ["target_pledge_amount", #<BigDecimal:100fc6448,'0.1E3',9(45)>], ["team_members", "The team members"], ["updated_at", Fri, 24 Jan 2014 15:05:40 UTC +00:00], ["website", "http://project.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/projects/1/pledges/new" for 127.0.0.1 at 2014-01-24 09:05:40 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"1"}
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered shared/_errors.html.erb (3.8ms)
+  Rendered pledges/new.html.erb within layouts/application (15.2ms)
+Completed 500 Internal Server Error in 172ms
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "projects" ("created_at", "description", "image_file_name", "name", "pledging_ends_on", "target_pledge_amount", "team_members", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 24 Jan 2014 15:05:40 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["image_file_name", "test.png"], ["name", "Test Project"], ["pledging_ends_on", Sat, 25 Jan 2014], ["target_pledge_amount", #<BigDecimal:102b31818,'0.1E3',9(45)>], ["team_members", "The team members"], ["updated_at", Fri, 24 Jan 2014 15:05:40 UTC +00:00], ["website", "http://project.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/projects/1" for 127.0.0.1 at 2014-01-24 09:05:40 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered projects/show.html.erb within layouts/application (14.6ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_flashes.html.erb (0.7ms)
+  Rendered layouts/_sidebar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 51ms (Views: 48.8ms | ActiveRecord: 0.2ms)
+Started GET "/projects/1/pledges/new" for 127.0.0.1 at 2014-01-24 09:05:40 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_errors.html.erb (1.5ms)
+  Rendered pledges/new.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 6ms
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.6ms)[0m  INSERT INTO "projects" ("created_at", "description", "image_file_name", "name", "pledging_ends_on", "target_pledge_amount", "team_members", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 24 Jan 2014 15:06:42 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["image_file_name", "test.png"], ["name", "Test Project"], ["pledging_ends_on", Sat, 25 Jan 2014], ["target_pledge_amount", #<BigDecimal:100f56468,'0.1E3',9(45)>], ["team_members", "The team members"], ["updated_at", Fri, 24 Jan 2014 15:06:42 UTC +00:00], ["website", "http://project.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/projects/1" for 127.0.0.1 at 2014-01-24 09:06:42 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered projects/show.html.erb within layouts/application (16.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_flashes.html.erb (0.6ms)
+  Rendered layouts/_sidebar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 148ms (Views: 116.0ms | ActiveRecord: 0.3ms)
+Started GET "/projects/1/pledges/new" for 127.0.0.1 at 2014-01-24 09:06:42 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered pledges/new.html.erb within layouts/application (19.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 76ms (Views: 24.0ms | ActiveRecord: 0.6ms)
+Started POST "/projects/1/pledges" for 127.0.0.1 at 2014-01-24 09:06:42 -0600
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "pledge"=>{"name"=>"Joe Smith", "email"=>"joe@gmail.com", "amount"=>"100.0", "comment"=>"Count me in!"}, "commit"=>"Create Pledge", "project_id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "pledges" ("amount", "comment", "created_at", "email", "name", "project_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["amount", #<BigDecimal:1028fa310,'0.1E3',9(18)>], ["comment", "Count me in!"], ["created_at", Fri, 24 Jan 2014 15:06:42 UTC +00:00], ["email", "joe@gmail.com"], ["name", "Joe Smith"], ["project_id", 1], ["updated_at", Fri, 24 Jan 2014 15:06:42 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/projects/1/pledges
+Completed 302 Found in 9ms (ActiveRecord: 1.0ms)
+Started GET "/projects/1/pledges" for 127.0.0.1 at 2014-01-24 09:06:42 -0600
+Processing by PledgesController#index as HTML
+  Parameters: {"project_id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPledge Load (0.3ms)[0m  [1mSELECT "pledges".* FROM "pledges" WHERE "pledges"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered pledges/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_flashes.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (1.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "projects" ("created_at", "description", "image_file_name", "name", "pledging_ends_on", "target_pledge_amount", "team_members", "updated_at", "website") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 24 Jan 2014 15:06:42 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["image_file_name", "test.png"], ["name", "Test Project"], ["pledging_ends_on", Sat, 25 Jan 2014], ["target_pledge_amount", #<BigDecimal:100967e58,'0.1E3',9(45)>], ["team_members", "The team members"], ["updated_at", Fri, 24 Jan 2014 15:06:42 UTC +00:00], ["website", "http://project.com"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/projects/1/pledges/new" for 127.0.0.1 at 2014-01-24 09:06:42 -0600
+Processing by PledgesController#new as HTML
+  Parameters: {"project_id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered pledges/new.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "pledges"
+Started POST "/projects/1/pledges" for 127.0.0.1 at 2014-01-24 09:06:42 -0600
+Processing by PledgesController#create as HTML
+  Parameters: {"utf8"=>"✓", "pledge"=>{"name"=>"", "email"=>"", "amount"=>"", "comment"=>""}, "commit"=>"Create Pledge", "project_id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered shared/_errors.html.erb (3.8ms)
+  Rendered pledges/new.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 23ms (Views: 12.9ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "pledges"
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
